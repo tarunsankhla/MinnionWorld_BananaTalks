@@ -29,6 +29,18 @@ var input  = document.querySelector("#Input_item");
 var outputdiv  = document.querySelector("#output");
 //  outputdiv.innerText = "hell";
 
-btnTranslate.addEventListener("click",function clickEventHandler(){
-    outputdiv.innerHTML = "Translated" + input.value    ;
-})
+var serve_url_ ="https://lesson4apitarun-1.tarunsankhla.repl.co/translate/yoda.json";
+var minionurl ="https://api.funtranslations.com/translate/minion.json";
+
+// btnTranslate.addEventListener("click",function clickEventHandler(){
+//     outputdiv.innerHTML = "Translated" + input.value    ;
+// })
+function clickEventHandler(){
+    var inputtext =input.value;
+    fetch(getTranslationURL(inputtext)).then(res => res.json()).then(json =>  outputdiv.innerHTML = "Translated"+json.contents.translated ).catch(e => console.log(e))
+}
+
+btnTranslate.addEventListener("click",clickEventHandler)
+function getTranslationURL(text){
+    return minionurl +"?text=" + text ;
+}
