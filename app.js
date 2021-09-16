@@ -37,7 +37,7 @@ var minionurl ="https://api.funtranslations.com/translate/minion.json";
 // })
 function clickEventHandler(){
     var inputtext =input.value;
-    fetch(getTranslationURL(inputtext)).then(res => res.json()).then(json =>  outputdiv.innerHTML = "Translated"+json.contents.translated ).catch(e => console.log(e))
+    fetch(getTranslationURL(inputtext)).then(res => res.json()).then(json =>  outputdiv.innerHTML = "Translated : "+json.contents.translated ).catch(e => console.log(e))
 }
 
 btnTranslate.addEventListener("click",clickEventHandler)
