@@ -21,9 +21,9 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="./bootstrap.css"></script>
-		<script src=".bootstrap.min.css"></script>
+		<script src="./bootstrap.min.css"></script>
 		<script src="./_variables.scss"></script>
-		<script src="._bootswatch (1).scss"></script>
+		<script src="./_bootswatch (1).scss"></script>
     <style>
         textarea{
             width: 80%;
@@ -38,7 +38,7 @@
             height: 10vh;
             border: 1px solid black;
             margin: 1rem;
-            padding: 1rem;
+            /* padding: 1rem; */
             margin: 5%;
         }
         #footer{
@@ -64,21 +64,25 @@
     </style> 
 </head>
 <body>
-    <div class="card text-white bg-dark mb-3" style="max-width: 80rem; user-select: auto; margin: 5%; height: 30rem; ">
-        <div class="card-header" style="user-select: auto;text-align: center;"><h2>Bannana Talks</h2></div>
+    <!-- <div class="card text-white bg-secondary mb-3" style="max-width: 80rem; user-select: auto; margin: 5%; height: 30rem; "> -->
+      <div class="card-header bg-secondary" style="user-select: auto;text-align: center;"><h2>Bannana Talks</h2></div>
         <div class="card-body" style="user-select: auto;">
           <!-- <h4 class="card-title" style="user-select: auto;">Primary card title</h4>
           <p class="card-text" style="user-select: auto;">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
           <textarea class="card-title" style="user-select: auto;" type="text" id="Input_item" placeholder="Enter you Sentence here in English and We will convert it into Banana Language."></textarea>
           <!-- <button  id="translate_button">Translate</button> -->
-          <div class="d-grid gap-2" style="user-select: auto; ">
-            <button class="btn btn-secondary" id="translate_button" type="button" style="user-select: auto; width: 30rem; margin: 1rem;">Translate</button>
+          <!-- <div class="d-grid gap-2" style="user-select: auto; "> -->
+            <div class="btn btn-dark col text-center" id="translate_button" type="button" style="user-select: auto; width:20%;text-align: center;margin-left: 5%;">Translate</div>
+            <div style="text-align:center;">
+                The output will come here 👇
+            </div>
             <!-- <button class="btn btn-lg btn-primary" type="button" style="user-select: auto;">Block button</button> -->
-          </div>
-          <div id="output"></div>
+          <!-- </div> -->
+          <textarea id="output"></textarea>
      
         </div>
       </div>
+    <!-- </div> -->
     <!-- <div class="row" id="head">
         <h1>Talk Banana</h1>
     </div>
@@ -94,7 +98,7 @@
        <div class="footer-copyright text-center py-3"> About the Banana Talks is based on Minnion language translator, You can Convert English to Minion Language </div>
     </div> -->
     <footer>
-        <h3 style="padding: 4%;"> About the Banana Talks is based on Minnion language translator, You can Convert English to Minion Language </h3>
+        <h3 style="padding: 5%;"> About the Banana Talks is based on Minnion language translator, You can Convert English to Minion Language </h3>
     </footer>
     <script src="./app.js" type="text/javascript"></script>
 </body>
